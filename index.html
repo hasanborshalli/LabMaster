@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="img/logo.jpeg" dimensions="1280x1158" />
+        <link rel="stylesheet" href="index.css" />
+
+        <!-- Anton Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Old Standard Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome Link -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        />
+
+        <title>Lab Master</title>
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div class="spinner"></div>
+        </div>
+        <section class="main" id="main">
+            <nav>
+                <div class="logo">
+                    <h1>LAB MASTER</h1>
+                    <p>Laboratory Supplies & Equipment</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li>
+                            <a href="#scope">Scope of Work</a>
+                        </li>
+                        <li><a href="#suppliers">Suppliers</a></li>
+                        <li>
+                            <a href="#contact">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="burger-bar" id="burger" onclick="showLinks()">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </nav>
+            <div class="hidden-links" id="hidden-links">
+                <ul>
+                    <li onclick="showLinks()"><a href="#home">Home</a></li>
+                    <li onclick="showLinks()"><a href="#about">About Us</a></li>
+                    <li onclick="showLinks()">
+                        <a href="#scope">Scope of Work</a>
+                    </li>
+                    <li onclick="showLinks()">
+                        <a href="#suppliers">Suppliers</a>
+                    </li>
+                    <li onclick="showLinks()">
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <section class="home" id="home">
+                <h1>Know Us More!</h1>
+                <p>
+                    Lab Master S.A.R.L. is a training and consultancy provider
+                    for all types of laboratories, as well as distributor of
+                    quality control testing technologies, kits and consumables
+                    for local & international manufacturers of food, water,
+                    chemicals & more. Our services include provision of
+                    training. laboratory development towards accreditation,
+                    consultancy services, design, marketing, installation and
+                    maintenance of equipment, in addition to provision of
+                    technical support to laboratories.
+                </p>
+                <p>
+                    Lab Master is a committed service-oriented company that
+                    applies its expertise to seek novel technologies worldwide
+                    and delivers integrated scientific solutions. We offer the
+                    best services and high-quality products from leading
+                    companies to improve the work of industrial quality control
+                    specialists, governmental reference laboratories and
+                    researchers in Lebanon.
+                </p>
+                <i class="fa fa-angle-double-down" id="arrow"></i>
+            </section>
+            <section class="info">
+                <div class="block">
+                    <h1>OUR VISION</h1>
+                    <hr />
+                    <p>
+                        New developments and technologies are rapidly
+                        revolutionizing the research and laboratory market. To
+                        stay ahead of these fast-paced changes, Lab Master
+                        collaborates closely with world-leading manufacturers,
+                        offering not just innovative products but also
+                        high-level consultancy services across all laboratory
+                        scopes in Lebanon and the Middle East region.
+                    </p>
+                </div>
+                <div class="block">
+                    <h1>OUR MISSION</h1>
+                    <hr />
+                    <p>
+                        Lab Master aims at providing comprehensive support to
+                        laboratories in establishing, improving and
+                        demonstrating their reliability and competence to their
+                        customers and the authoritative bodies. At Lab Master,
+                        we focus our attention, primarily and constantly, on our
+                        customers' work through the values, roles and
+                        responsibilities Lab Master encompasses.
+                    </p>
+                </div>
+            </section>
+            <section class="about" id="about">
+                <h1 id="about-heading">Why Choose Us?</h1>
+                <div class="advantages">
+                    <div class="advantage">
+                        <img src="img/integrity.png" alt="" loading="lazy" />
+                        <h1>Integrity and Transparency</h1>
+                    </div>
+                    <div class="advantage">
+                        <img src="img/commitment.png" alt="" loading="lazy" />
+                        <h1>Diligence and Commitment</h1>
+                    </div>
+                    <div class="advantage">
+                        <img src="img/innovation.png" alt="" loading="lazy" />
+                        <h1>Innovation and Quality</h1>
+                    </div>
+                    <div class="advantage">
+                        <img src="img/teamwork.png" alt="" loading="lazy" />
+                        <h1>Leadership and Teamwork</h1>
+                    </div>
+                </div>
+            </section>
+            <hr id="about-hr" />
+            <section class="scopes" id="scope">
+                <h1 id="scope-heading">Our Scope Of Work</h1>
+                <div class="scope-blue" id="first">
+                    <h1>Industries</h1>
+                    <ul>
+                        <li>
+                            Food (including but not limited to Agro-Food
+                            Processing, dairies, bakeries, poultry, & meat)
+                        </li>
+                        <li>
+                            Water and Beverages (including but not limited to
+                            soft drinks, juices, wine and beer)
+                        </li>
+                        <li>Paint and derivatives</li>
+                        <li>Detergents and chemicals</li>
+                        <li>Petroleum Companies</li>
+                        <li>Cosmetics</li>
+                    </ul>
+                </div>
+                <div class="scope-green">
+                    <h1>Universities</h1>
+                    <ul>
+                        <li>Medical Schools</li>
+                        <li>Chemistry Departments</li>
+                        <li>Biology Departments</li>
+                        <li>Physics Departments</li>
+                        <li>Agriculture Departments</li>
+                        <li>Research Laboratories</li>
+                    </ul>
+                </div>
+                <div class="scope-blue" id="third">
+                    <h1>Hospitals and Private Clinics</h1>
+                    <ul>
+                        <li>Bacteriology laboratories</li>
+                        <li>Mycology laboratories</li>
+                        <li>Parasitology laboratories</li>
+                    </ul>
+                </div>
+                <div class="scope-green" id="last">
+                    <h1>Others</h1>
+                    <ul>
+                        <li>Environmental Control</li>
+                        <li>Ministries & other Governmental</li>
+                        <li>Institutions</li>
+                        <li>Non-Governmental Organization</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="suppliers" id="suppliers">
+                <h1>Our Suppliers</h1>
+                <div class="pictures">
+                    <img
+                        src="img/filtra.png"
+                        alt=""
+                        id="filtra"
+                        loading="lazy"
+                    />
+                    <img src="img/infitek.jpeg" alt="" loading="lazy" />
+                    <img src="img/hyserve.jpeg" alt="" loading="lazy" />
+                    <img src="img/liofilchem.jpeg" alt="" loading="lazy" />
+                    <img src="img/huida.jpeg" alt="" loading="lazy" />
+                    <img src="img/normax.jpeg" alt="" loading="lazy" />
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container">
+                    <h1>Contact Us</h1>
+                    <h3>Mailing Address:</h3>
+                    <a href="mailto:sales@labmaster-lb.com"
+                        >sales@labmaster-lb.com</a
+                    >
+                    <a href="mailto:info@labmaster-lb.com"
+                        >info@labmaster-lb.com</a
+                    >
+                    <h3>Phone number:</h3>
+
+                    <a href="https://wa.me/96103520185" target="_blank"
+                        >03-520185</a
+                    >
+                    <p>(whatsapp available on this number)</p>
+                </div>
+            </section>
+            <footer></footer>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>

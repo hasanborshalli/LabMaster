@@ -1,0 +1,560 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    visibility: hidden; /* Hide content */
+    opacity: 0; /* Make content invisible */
+    transition: opacity 0.5s ease;
+}
+#preloader {
+    background-image: url("img/lab.JPG");
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it covers all content */
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #163060;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+nav {
+    height: 100px;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #163060;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+}
+.active {
+    font-weight: 700;
+    text-decoration: underline solid 2px;
+    text-underline-offset: 7px;
+}
+h1,
+h3,
+p,
+.scopes ul li {
+    cursor: context-menu;
+}
+.logo h1 {
+    color: white;
+    font-family: "Anton";
+    font-size: 50px;
+    margin: 0;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: context-menu;
+}
+.logo p {
+    margin: 0;
+    color: #76b7a6;
+    font-family: "Old Standard TT";
+    font-size: 15px;
+    margin-top: -10px;
+}
+.links ul {
+    color: white;
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    font-family: "Old Standard TT";
+    color: #76b7a6;
+    font-weight: 400;
+    font-size: 20px;
+    align-items: center;
+}
+.links ul li:hover {
+    font-weight: 700;
+    text-decoration: underline solid 2px;
+    text-underline-offset: 7px;
+
+    cursor: pointer;
+}
+.burger-bar {
+    background: none;
+    border: none;
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+.hidden-links {
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    box-shadow: 4px 4px 4px rgb(141, 141, 141);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 3;
+}
+.hidden-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    gap: 25px;
+    margin-right: 30px;
+    font-family: "Old Standard TT";
+    font-weight: 400;
+    font-size: 20px;
+}
+.hidden-links ul li {
+    cursor: pointer;
+}
+.hidden-links a,
+.links a {
+    text-decoration: none;
+    color: #76b7a6;
+}
+.show {
+    animation-name: show;
+    animation-duration: 1s;
+}
+@keyframes show {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 12.5%;
+    }
+}
+.remove {
+    animation-name: remove;
+    animation-duration: 1s;
+}
+@keyframes remove {
+    0% {
+        top: 10%;
+    }
+    100% {
+        top: -50%;
+    }
+}
+.home {
+    width: 100%;
+    height: 600px;
+    background-image: url("img/lab.JPG");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 0; /* Ensure the overlay is above the background */
+}
+
+.home > * {
+    position: relative;
+    z-index: 2; /*Ensure content is above the overlay*/
+    color: white; /* Make text visible on dark background */
+}
+.home h1 {
+    color: white;
+    font-family: "Anton";
+    font-size: 70px;
+    margin: 0;
+}
+.home p {
+    width: 70%;
+    text-align: center;
+    color: white;
+    font-family: "Old Standard TT";
+    font-size: 20px;
+}
+.h1Animate-home {
+    animation: leFadeInRight 2s;
+}
+@keyframes leFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pAnimate-home {
+    animation: leFadeInLeft 2s;
+}
+
+@keyframes leFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+#arrow {
+    font-size: 80px;
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    margin-top: 50px;
+}
+.block {
+    width: 40%;
+    text-align: center;
+}
+.block h1,
+#about-heading,
+#scope-heading,
+.suppliers h1 {
+    color: #163060;
+    font-size: 50px;
+    font-family: "Anton";
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    letter-spacing: 2px;
+}
+.block hr {
+    width: 30%;
+    height: 3px;
+    border-radius: 15px;
+    color: #76b7a6;
+    background-color: #76b7a6;
+}
+.block p {
+    font-family: "Old Standard TT";
+    font-size: 18px;
+    font-weight: 400;
+}
+.infoAnimate {
+    animation: doorCloseFromLeft 2s;
+}
+@keyframes doorCloseFromLeft {
+    from {
+        transform: perspective(400px) rotateY(90deg);
+        transform-origin: left;
+        opacity: 0;
+    }
+    50%,
+    to {
+        transform: perspective(400px) rotateY(0deg);
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+.about {
+    margin-top: 50px;
+}
+#about-heading,
+#scope-heading,
+.suppliers h1 {
+    text-align: center;
+}
+#scope-heading {
+    margin-bottom: 50px;
+}
+.advantages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15%;
+    margin-top: 50px;
+}
+.advantage {
+    width: 40%;
+    text-align: center;
+    margin-bottom: 50px;
+    flex-shrink: 1;
+}
+.advantage h1 {
+    text-align: center;
+    color: #76b7a6;
+    font-size: 50px;
+    font-family: "Anton";
+    margin: 0;
+    letter-spacing: 2px;
+}
+#about-hr {
+    width: 60%;
+    height: 2px;
+    border-radius: 15px;
+    color: #76b7a6;
+    background-color: #76b7a6;
+    margin-bottom: 50px;
+}
+.aboutAnimate {
+    animation: lePushReleaseFrom 2s;
+}
+@keyframes lePushReleaseFrom {
+    from {
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+}
+.scope-blue,
+.scope-green {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+#first {
+    padding-top: 20px !important;
+}
+.scopes {
+    margin-bottom: 50px;
+}
+.scopes h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Anton";
+    margin: 0;
+    letter-spacing: 2px;
+}
+.scopes li {
+    font-family: "Old Standard TT";
+    font-size: 18px;
+    font-weight: 400;
+}
+.scope-blue {
+    background-color: #163060;
+    color: #76b7a6;
+}
+.scope-green {
+    background-color: #76b7a6;
+    color: #163060;
+}
+.scope-blue::after,
+.scope-green::after {
+    content: "";
+    position: absolute;
+    bottom: -40px; /* Adjusts the triangle to be placed just outside the div */
+    left: 50%; /* Center the triangle horizontally */
+    transform: translateX(-50%); /* Centers the triangle */
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid black; /* Adjust the color to your preference */
+    z-index: 2;
+}
+.scopes ul {
+    margin: 0;
+}
+#last::after {
+    border: 0 !important;
+}
+/* Adjust the triangle color for .scope-blue and .scope-green */
+.scope-blue::after {
+    border-top-color: #163060; /* Same color as .scope-blue background */
+}
+
+.scope-green::after {
+    border-top-color: #76b7a6; /* Same color as .scope-green background */
+}
+.pictures {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.pictures img {
+    width: 15%;
+}
+.supplierAnimate {
+    animation: fadeInLeft 3s;
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 400px;
+    height: 500px;
+    background-color: #163060;
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px 3px rgb(141, 141, 141);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container h1 {
+    font-family: "Anton";
+    letter-spacing: 2px;
+    font-size: 50px;
+    margin-top: 0;
+}
+.container h3 {
+    font-family: "Anton";
+    letter-spacing: 2px;
+    font-size: 23px;
+}
+.container a,
+.container p {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    font-family: "Old Standart TT";
+    font-size: 20px;
+    width: fit-content;
+}
+footer {
+    width: 100%;
+    background-color: #163060;
+    height: 200px;
+    margin-top: 100px;
+}
+@media (max-width: 890px) {
+    .links ul {
+        font-size: 15px;
+    }
+    .logo h1 {
+        font-size: 40px;
+    }
+    .logo p {
+        font-size: 12px;
+    }
+    .home h1 {
+        font-size: 60px;
+    }
+    .home p {
+        font-size: 18px;
+    }
+}
+@media (max-width: 725px) {
+    .links {
+        display: none;
+    }
+    .burger-bar {
+        display: block;
+    }
+    #about-heading,
+    .advantage h1,
+    #scope-heading,
+    .suppliers h1,
+    .block h1,
+    .scopes h1 {
+        font-size: 40px;
+    }
+    .scopes li,
+    .block p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 650px) {
+    .home h1 {
+        font-size: 50px;
+    }
+    .home p {
+        font-size: 15px;
+    }
+    .info,
+    .advantages {
+        flex-direction: column;
+    }
+    .block {
+        width: 80%;
+    }
+}
+@media (max-width: 450px) {
+    .logo h1,
+    .scopes h1,
+    .suppliers h1 {
+        font-size: 30px;
+    }
+    .logo p {
+        font-size: 9px;
+        margin-top: -6px;
+    }
+    .home h1,
+    .container h1 {
+        font-size: 40px;
+    }
+    .home p {
+        font-size: 13px;
+    }
+    .advantage h1,
+    .container h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 300px;
+    }
+
+    .container p,
+    .container a {
+        font-size: 18px;
+    }
+    .pictures img {
+        margin-bottom: 30px;
+    }
+}
