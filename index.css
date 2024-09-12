@@ -52,6 +52,14 @@ nav {
     position: sticky;
     top: 0;
 }
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.left-nav img {
+    width: 100px;
+}
 .active {
     font-weight: 700;
     text-decoration: underline solid 2px;
@@ -65,8 +73,8 @@ p,
 }
 .logo h1 {
     color: white;
-    font-family: "Anton";
-    font-size: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
     margin: 0;
 }
 .logo {
@@ -79,8 +87,8 @@ p,
 .logo p {
     margin: 0;
     color: #76b7a6;
-    font-family: "Old Standard TT";
-    font-size: 15px;
+    font-family: "Poppins";
+    font-size: 12px;
     margin-top: -10px;
 }
 .links ul {
@@ -88,10 +96,10 @@ p,
     display: flex;
     list-style-type: none;
     gap: 30px;
-    font-family: "Old Standard TT";
+    font-family: "Poppins";
     color: #76b7a6;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 17px;
     align-items: center;
 }
 .links ul li:hover {
@@ -127,7 +135,7 @@ p,
     list-style-type: none;
     gap: 25px;
     margin-right: 30px;
-    font-family: "Old Standard TT";
+    font-family: "Poppins";
     font-weight: 400;
     font-size: 20px;
 }
@@ -163,10 +171,13 @@ p,
         top: -50%;
     }
 }
+
 .home {
+    background-image: url("img/lab.JPG");
     width: 100%;
     height: 600px;
-    background-image: url("img/lab.JPG");
+    overflow: hidden;
+    display: flex;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -181,18 +192,18 @@ p,
     left: 0;
     width: 100%;
     height: 600px;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-    z-index: 0; /* Ensure the overlay is above the background */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
 }
 
 .home > * {
     position: relative;
-    z-index: 2; /*Ensure content is above the overlay*/
-    color: white; /* Make text visible on dark background */
+    z-index: 2;
+    color: white;
 }
 .home h1 {
     color: white;
-    font-family: "Anton";
+    font-family: "Bebas Neue", sans-serif;
     font-size: 70px;
     margin: 0;
 }
@@ -200,8 +211,8 @@ p,
     width: 70%;
     text-align: center;
     color: white;
-    font-family: "Old Standard TT";
-    font-size: 20px;
+    font-family: "Poppins";
+    font-size: 18px;
 }
 .h1Animate-home {
     animation: leFadeInRight 2s;
@@ -253,7 +264,7 @@ p,
 .suppliers h1 {
     color: #163060;
     font-size: 50px;
-    font-family: "Anton";
+    font-family: "Bebas Neue", sans-serif;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
     letter-spacing: 2px;
@@ -266,7 +277,7 @@ p,
     background-color: #76b7a6;
 }
 .block p {
-    font-family: "Old Standard TT";
+    font-family: "Poppins";
     font-size: 18px;
     font-weight: 400;
 }
@@ -316,7 +327,7 @@ p,
     text-align: center;
     color: #76b7a6;
     font-size: 50px;
-    font-family: "Anton";
+    font-family: "Bebas Neue", sans-serif;
     margin: 0;
     letter-spacing: 2px;
 }
@@ -357,12 +368,12 @@ p,
 .scopes h1 {
     text-align: center;
     font-size: 50px;
-    font-family: "Anton";
+    font-family: "Bebas Neue", sans-serif;
     margin: 0;
     letter-spacing: 2px;
 }
 .scopes li {
-    font-family: "Old Standard TT";
+    font-family: "Poppins";
     font-size: 18px;
     font-weight: 400;
 }
@@ -414,6 +425,7 @@ p,
 }
 .pictures img {
     width: 15%;
+    margin-bottom: 30px;
 }
 .supplierAnimate {
     animation: fadeInLeft 3s;
@@ -449,7 +461,7 @@ p,
     align-items: center;
 }
 .container h1 {
-    font-family: "Anton";
+    font-family: "Bebas Neue", sans-serif;
     letter-spacing: 2px;
     font-size: 50px;
     margin-top: 0;
@@ -464,29 +476,37 @@ p,
     text-decoration: none;
     color: white;
     margin: 10px;
-    font-family: "Old Standart TT";
+    font-family: "Poppins";
     font-size: 20px;
     width: fit-content;
 }
-
-@media (max-width: 890px) {
+@media (max-width: 950px) {
     .links ul {
         font-size: 15px;
     }
     .logo h1 {
-        font-size: 40px;
+        font-size: 35px;
     }
     .logo p {
+        font-size: 10px;
+    }
+}
+@media (max-width: 890px) {
+    .links ul {
         font-size: 12px;
     }
+    .logo h1 {
+        font-size: 30px;
+    }
+
     .home h1 {
         font-size: 60px;
     }
     .home p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
-@media (max-width: 725px) {
+@media (max-width: 790px) {
     .links {
         display: none;
     }
@@ -506,12 +526,13 @@ p,
         font-size: 15px;
     }
 }
+
 @media (max-width: 650px) {
     .home h1 {
         font-size: 50px;
     }
     .home p {
-        font-size: 15px;
+        font-size: 13px;
     }
     .info,
     .advantages {
@@ -527,6 +548,9 @@ p,
     .suppliers h1 {
         font-size: 30px;
     }
+    .left-nav img {
+        width: 70px;
+    }
     .logo p {
         font-size: 9px;
         margin-top: -6px;
@@ -536,7 +560,7 @@ p,
         font-size: 40px;
     }
     .home p {
-        font-size: 13px;
+        font-size: 11px;
     }
     .advantage h1,
     .container h3 {
@@ -549,7 +573,7 @@ p,
 
     .container p,
     .container a {
-        font-size: 18px;
+        font-size: 15px;
     }
     .pictures img {
         margin-bottom: 30px;
