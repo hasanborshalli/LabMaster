@@ -480,6 +480,32 @@ p,
     font-size: 20px;
     width: fit-content;
 }
+.small-text {
+    margin: 0;
+    font-family: "Archivo Black";
+    font-size: 1.3rem;
+}
+.medium-text {
+    font-family: "Archivo Black";
+    color: black;
+    font-size: 1.8rem;
+}
+.large-text {
+    font-family: "Archivo Black";
+    color: #ff914d;
+    font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+    .small-text {
+        font-size: 1rem;
+    }
+    .medium-text {
+        font-size: 1.5rem;
+    }
+    .large-text {
+        font-size: 2.2rem;
+    }
+}
 @media (max-width: 950px) {
     .links ul {
         font-size: 15px;
